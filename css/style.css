@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 1fr 1fr 0.5fr;
+    grid-template-areas: 
+    "header menu"
+    "hero hero"
+    "main image"
+    "main extra"
+    "banner banner"
+    ;
+
+    height: 100vh;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.menu {
+    align-items: center;
+    display: grid;
+    background-color: tomato;
+    grid-area: menu;
+    margin-left: -200px;
+}
+
+.hero {
+    align-items: center;
+    display: grid;
+    background-color: violet;
+    grid-area: hero;
+     
+}
+
+.banner {
+    align-items: center;
+    display: grid;
+    background-color: springgreen;
+    grid-area: banner;
+    
+}
+
+.extra {
+    align-items: center;
+    display: grid;
+    background-color: blue;
+    grid-area: extra;
+    
+}
+
+.image {
+    align-items: center;
+    display: grid;
+    background-color: purple;
+    grid-area: image;
+    
+}
+
+header {
+    align-items: center;
+    display: grid;
+    background-color: royalblue;
+    grid-area: header;
+    margin-right: 200px;
+}
+
+main {
+    align-items: center;
+    display: grid;
+    background-color: grey;
+    grid-area: main;
+    
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr 2fr 2fr 1fr 1fr;
+        grid-template-areas: 
+            "header header header"
+            "hero hero hero"
+            "menu main main"
+            "menu banner banner"
+            "menu extra image"
+        ;
+    }
+
+    .menu {
+        margin: 0;
+    }
+
+    header {
+        margin: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr 1fr 1fr;
+        grid-template-areas: 
+            "header"
+            "menu"
+            "hero"
+            "main"
+            "banner"
+            "extra"
+            "image"
+        ;
+    }
+
+    .menu {
+        margin: 0;
+    }
+
+    header {
+        margin: 0;
+    }
+}
+
